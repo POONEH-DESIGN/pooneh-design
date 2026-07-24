@@ -1,0 +1,392 @@
+OPRATOR, [01/05/1405 02:57 ب.ظ]
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پونه | طراحی گرافیک و برندینگ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;700;900&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #D0E8D0; /* سبز مریم پودری - پس‌زمینه اصلی */
+            color: #2B4E3B; /* سبز مریم تیره - متن اصلی */
+            direction: rtl;
+        }
+
+        /* ===== هدر ===== */
+        .header {
+            background-color: #2B4E3B; /* سبز مریم تیره */
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            color: #F9F6F0;
+            letter-spacing: 2px;
+        }
+        .logo span {
+            color: #C49A6C; /* طلایی مسی برای کنتراست */
+        }
+
+        .nav a {
+            color: #F9F6F0;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: 300;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .nav a:hover {
+            color: #8FBC8F; /* سبز مریم کلاسیک - هاور */
+        }
+
+        /* ===== بنرها ===== */
+        .banner-container {
+            max-width: 1300px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .banner {
+            width: 100%;
+            height: 400px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* بنر ۱ */
+        .banner-1 {
+            background: linear-gradient(135deg, #D0E8D0 0%, #8FBC8F 100%);
+            border-right: 8px solid #C49A6C;
+        }
+        .banner-1 h1 {
+            font-size: 72px;
+            font-weight: 900;
+            color: #2B4E3B;
+        }
+        .banner-1 .sub {
+            font-size: 22px;
+            font-weight: 300;
+            color: #4A7C59; /* سبز مریم پررنگ */
+            margin-top: 8px;
+        }
+        .banner-1 .line {
+            width: 120px;
+            height: 3px;
+            background: #C49A6C;
+            margin: 12px auto 0;
+        }
+
+        /* بنر ۲ */
+        .banner-2 {
+            background: linear-gradient(135deg, #4A7C59 0%, #2B4E3B 100%);
+            color: #F9F6F0;
+        }
+        .banner-2 h2 {
+            font-size: 48px;
+            font-weight: 900;
+            color: #F9F6F0;
+        }
+        .banner-2 .sub {
+            font-size: 20px;
+            font-weight: 300;
+            color: #D0E8D0; /* سبز مریم پودری برای زیرمتن روی تیره */
+            margin-top: 10px;
+        }
+        .banner-2 .line {
+            width: 100px;
+            height: 3px;
+            background: #C49A6C;
+            margin: 12px auto 0;
+        }
+
+        /* بنر ۳ */
+        .banner-3 {
+            background: linear-gradient(135deg, #D0E8D0 0%, #F9F6F0 100%);
+            border-left: 8px solid #C49A6C;
+        }
+        .banner-3 h2 {
+            font-size: 48px;
+            font-weight: 900;
+            color: #2B4E3B;
+        }
+        .banner-3 .sub {
+            font-size: 20px;
+            font-weight: 300;
+            color: #4A7C59;
+            margin-top: 10px;
+        }
+        .banner-3 .line {
+            width: 100px;
+            height: 3px;
+            background: #C49A6C;
+            margin: 12px auto 0;
+        }
+
+        /* ===== گالری نمونه‌کارها ===== */
+        .gallery-section {
+            max-width: 1300px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+OPRATOR, [01/05/1405 02:57 ب.ظ]
+.gallery-title {
+            font-size: 36px;
+            font-weight: 900;
+            color: #2B4E3B;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #C49A6C;
+            padding-bottom: 10px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background: #F9F6F0; /* سفید شکری برای کنتراست */
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            border-bottom: 4px solid #8FBC8F; /* سبز مریم کلاسیک */
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+            border-bottom-color: #4A7C59;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .gallery-item .desc {
+            padding: 12px;
+            text-align: center;
+            font-weight: 300;
+            color: #2B4E3B;
+            background-color: #E2F0E2; /* سبز مریم خیلی روشن */
+        }
+
+        /* ===== درباره من ===== */
+        .about-section {
+            max-width: 1300px;
+            margin: 50px auto;
+            padding: 40px 20px;
+            background: #E2F0E2; /* سبز مریم خیلی روشن */
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-right: 6px solid #6BAE6B; /* سبز مریم متوسط */
+        }
+        .about-section h2 {
+            font-size: 32px;
+            color: #2B4E3B;
+            margin-bottom: 15px;
+        }
+        .about-section p {
+            font-size: 18px;
+            line-height: 2;
+            color: #4A7C59;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .about-section strong {
+            color: #1A3326; /* سبز مریم شبی */
+        }
+
+        /* ===== تماس ===== */
+        .contact-section {
+            max-width: 1300px;
+            margin: 50px auto;
+            padding: 40px 20px;
+            background: #B5D6B5; /* سبز مریم ملایم */
+            border-radius: 20px;
+            text-align: center;
+            border-bottom: 6px solid #2B4E3B;
+        }
+        .contact-section h2 {
+            font-size: 32px;
+            color: #1A3326; /* سبز مریم شبی */
+            margin-bottom: 15px;
+        }
+        .contact-section p {
+            font-size: 18px;
+            color: #2B4E3B;
+            margin: 8px 0;
+        }
+        .contact-section .highlight {
+            color: #1A3326;
+            font-weight: 700;
+        }
+
+        /* ===== فوتر ===== */
+        .footer {
+            background-color: #1A3326; /* سبز مریم شبی - تیره‌ترین */
+            color: #D0E8D0;
+            text-align: center;
+            padding: 30px 20px;
+            font-weight: 300;
+            font-size: 14px;
+            border-top: 3px solid #C49A6C;
+        }
+        .footer span {
+            color: #C49A6C;
+        }
+
+        /* ===== واکنش‌گرا ===== */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 12px;
+                padding: 16px 20px;
+            }
+            .nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+            .banner {
+                height: 280px;
+                padding: 20px;
+            }
+            .banner-1 h1 {
+                font-size: 40px;
+            }
+            .banner-2 h2,
+            .banner-3 h2 {
+                font-size: 30px;
+            }
+            .banner-1 .sub,
+            .banner-2 .sub,
+            .banner-3 .sub {
+                font-size: 16px;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+
+OPRATOR, [01/05/1405 02:57 ب.ظ]
+@media (max-width: 480px) {
+            .banner {
+                height: 220px;
+            }
+            .banner-1 h1 {
+                font-size: 28px;
+            }
+            .banner-2 h2,
+            .banner-3 h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">پونه <span>|</span> طراحی</div>
+        <nav class="nav">
+            <a href="#">خانه</a>
+            <a href="#samples">نمونه‌کارها</a>
+            <a href="#about">درباره من</a>
+            <a href="#contact">تماس</a>
+        </nav>
+    </header>
+
+    <div class="banner-container">
+        <div class="banner banner-1">
+            <h1>پونه</h1>
+            <div class="sub">طراحی گرافیک و برندینگ</div>
+            <div class="line"></div>
+        </div>
+        <div class="banner banner-2">
+            <h2>طراحی به کمک هوش مصنوعی</h2>
+            <div class="sub">دقت و سرعت، بدون کاهش کیفیت</div>
+            <div class="line"></div>
+        </div>
+        <div class="banner banner-3">
+            <h2>هر پروژه، یک هویت</h2>
+            <div class="sub">طراحی اختصاصی برای برند شما</div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+    <div class="gallery-section" id="samples">
+        <div class="gallery-title">نمونه‌کارها</div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="1000346181_50496495647559224.webp" alt="پوستر بستنی انبه میهن">
+                <div class="desc">پوستر بستنی انبه میهن</div>
+            </div>
+            <div class="gallery-item">
+                <img src="1000346173_4042331015371673492.webp" alt="طراحی گرافیک و برندینگ">
+                <div class="desc">طراحی گرافیک و برندینگ</div>
+            </div>
+            <div class="gallery-item">
+                <img src="1000346112_4905634760887752983.webp" alt="عصر طراحی">
+                <div class="desc">عصر طراحی</div>
+            </div>
+            <div class="gallery-item">
+                <img src="1000346113_2394240940204947918.webp" alt="طراحی به کمک هوش مصنوعی">
+                <div class="desc">طراحی به کمک هوش مصنوعی</div>
+            </div>
+            <div class="gallery-item">
+                <img src="1000346110_5131506049336891655.webp" alt="پوستر کوکاکولا">
+                <div class="desc">پوستر کوکاکولا</div>
+            </div>
+            <div class="gallery-item">
+                <img src="1000346117_4904018762445390554.webp" alt="طراحی بی‌نهایت">
+                <div class="desc">طراحی بی‌نهایت</div>
+            </div>
+            <div class="gallery-item">
+                <img src="1000342542_106367907463510197.webp" alt="پوستر پرتغال">
+                <div class="desc">پوستر پرتغال</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-section" id="about">
+        <h2>درباره من</h2>
+        <p>
+            من <strong>بیتا</strong> هستم، طراح گرافیک و عاشق خلق تصاویر.<br>
+            با کمک <strong>هوش مصنوعی</strong> و خلاقیت انسانی، به کسب‌وکارها کمک می‌کنم تا با تولید محتوای حرفه‌ای، برند خود را ارتقا دهند.<br>
+            ساخت انواع پوستر تبلیغاتی، عکس‌های آتلیه‌ای، خانوادگی و مدیریت کانال‌های اجتماعی، تخصص من است.
+        </p>
+    </div>
+
+    <div class="contact-section" id="contact">
+        <h2>تماس با من</h2>
+        <p><span class="highlight">📞 تلفن:</span> ۰۹۳۶۷۳۸۰۱۲۵ (عصر تا شب)</p>
+        <p><span class="highlight">📱 پیام‌رسان:</span> ایتا، بله</p>
+        <p><span class="highlight">🎨 خدمات:</span> پوستر تبلیغاتی، عکس خانوادگی، آتلیه‌ای، کانال‌داری</p>
+    </div>
+
+    <footer class="footer">
+        © ۲۰۲۶ <span>پونه</span> — طراحی گرافیک و برندینگ
+    </footer>
+
+</body>
+</html>
